@@ -1,0 +1,41 @@
+{
+    "name": "imanrjb/lumen-sdk",
+    "description": "Needed packages for lumen framework",
+    "keywords": [],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Iman RJB",
+            "email": "iman.rjb@gmail.com"
+        }
+    ],
+    "require": {
+        "anik/form-request": "^4.5",
+        "flipbox/lumen-generator": "^9.1",
+        "guzzlehttp/guzzle": "^7.5",
+        "irazasyed/larasupport": "^1.7"
+    },
+    "require-dev": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "ImanRjb\\LumenSdk\\": "app/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "ImanRjb\\LumenSdk\\LumenSdkServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev"
+}
