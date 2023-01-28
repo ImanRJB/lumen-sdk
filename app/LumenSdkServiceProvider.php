@@ -23,6 +23,13 @@ class LumenSdkServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../config/services.php' => lumen_config_path('services.php')
         ], 'lumen-sdk');
+
+        if (! $this->app instanceof \Illuminate\Foundation\Application) {
+            $this->app->middleware(\ImanRjb\LumenSdk\Http\Middleware\PersianNumber::class);
+            $this->app->routeMiddleware([
+                'internal' => \ImanRjb\LumenSdk\Http\Middleware\InternalServicesMiddleware::class,
+            ]);
+        }
     }
 
     public function boot()
