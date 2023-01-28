@@ -11,7 +11,7 @@ class LumenSdkServiceProvider extends ServiceProvider
     {
         // For load config files
         if (file_exists(__DIR__ . '/../config/services.php')) {
-            $this->mergeConfigFrom(__DIR__ . '/../config/services.php', 'jwt-auth');
+            $this->mergeConfigFrom(__DIR__ . '/../config/services.php', 'services');
         }
 
         if (! $this->app instanceof \Illuminate\Foundation\Application) {
