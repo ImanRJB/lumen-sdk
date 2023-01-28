@@ -18,10 +18,10 @@ class InternalServicesMiddleware
      */
     public function handle($request, Closure $next)
     {
-        $allowedSecret = config('services.secret');
+        $allowedSecret = \config('services.secret');
         if ($request->header('Internal-Secret') == $allowedSecret) {
             return $next($request);
         }
-        abort(Response::HTTP_UNAUTHORIZED);
+        \abort(Response::HTTP_UNAUTHORIZED);
     }
 }
