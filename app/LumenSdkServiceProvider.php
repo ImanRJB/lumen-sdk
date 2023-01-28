@@ -4,7 +4,6 @@ namespace ImanRjb\LumenSdk;
 
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\ServiceProvider;
-use ImanRjb\JwtAuth\Commands\PurgeRevokedTokens;
 
 class LumenSdkServiceProvider extends ServiceProvider
 {

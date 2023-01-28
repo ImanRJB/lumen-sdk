@@ -21,7 +21,10 @@
     "autoload": {
         "psr-4": {
             "ImanRjb\\LumenSdk\\": "app/"
-        }
+        },
+        "files": [
+            "helper/functions.php"
+        ]
     },
     "extra": {
         "branch-alias": {
